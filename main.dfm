@@ -1,0 +1,1348 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Meddata HastaKabul Yard'#305'mc'#305' Uygulamalar'
+  ClientHeight = 510
+  ClientWidth = 953
+  Color = clBtnFace
+  Font.Charset = TURKISH_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 15
+  object cxPageControl1: TcxPageControl
+    Left = 0
+    Top = 48
+    Width = 953
+    Height = 432
+    Align = alClient
+    TabOrder = 0
+    Properties.ActivePage = cxTabSheet4
+    Properties.CustomButtons.Buttons = <>
+    ClientRectBottom = 427
+    ClientRectLeft = 5
+    ClientRectRight = 948
+    ClientRectTop = 29
+    object cxTabSheet1: TcxTabSheet
+      Caption = 'GSS Al'#305'nmayan'
+      ImageIndex = 0
+      object cxGrid1: TcxGrid
+        Left = 0
+        Top = 0
+        Width = 943
+        Height = 398
+        Align = alClient
+        TabOrder = 0
+        object cxGrid1DBTableView1: TcxGridDBTableView
+          PopupMenu = PopupMenu1
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          DataController.DataSource = ds_gss
+          DataController.Summary.DefaultGroupSummaryItems = <
+            item
+              Kind = skCount
+              Position = spFooter
+              Column = cxGrid1DBTableView1DOSYA_NO
+            end
+            item
+              Kind = skCount
+              Column = cxGrid1DBTableView1DOSYA_NO
+            end>
+          DataController.Summary.FooterSummaryItems = <
+            item
+              Kind = skCount
+              Column = cxGrid1DBTableView1DOSYA_NO
+            end>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.Footer = True
+          OptionsView.GroupByBox = False
+          object cxGrid1DBTableView1ADI: TcxGridDBColumn
+            Caption = 'Hasta Ad'#305
+            DataBinding.FieldName = 'ADI'
+            Width = 66
+          end
+          object cxGrid1DBTableView1SOYADI: TcxGridDBColumn
+            Caption = 'Hasta Soyad'#305
+            DataBinding.FieldName = 'SOYADI'
+            Width = 117
+          end
+          object cxGrid1DBTableView1DOSYA_NO: TcxGridDBColumn
+            Caption = 'Dosya'
+            DataBinding.FieldName = 'DOSYA_NO'
+            Width = 75
+          end
+          object cxGrid1DBTableView1PROTOKOL_NO: TcxGridDBColumn
+            Caption = 'Protokol'
+            DataBinding.FieldName = 'PROTOKOL_NO'
+            Width = 22
+          end
+          object cxGrid1DBTableView1BOLUM_ADI: TcxGridDBColumn
+            Caption = 'Poliklinik'
+            DataBinding.FieldName = 'BOLUM_ADI'
+            Width = 66
+          end
+          object cxGrid1DBTableView1ADI_SOYADI: TcxGridDBColumn
+            Caption = 'Doktor'
+            DataBinding.FieldName = 'ADI_SOYADI'
+            Width = 70
+          end
+          object cxGrid1DBTableView1KURUM_ADI: TcxGridDBColumn
+            Caption = 'Kurum Ad'#305
+            DataBinding.FieldName = 'KURUM_ADI'
+            Width = 280
+          end
+          object cxGrid1DBTableView1GSS_TAKIP_NO: TcxGridDBColumn
+            Caption = 'GSS Takip No'
+            DataBinding.FieldName = 'GSS_TAKIP_NO'
+            Width = 44
+          end
+          object cxGrid1DBTableView1GSS_BASVURU_NO: TcxGridDBColumn
+            Caption = 'GSS Ba'#351'vuru'
+            DataBinding.FieldName = 'GSS_BASVURU_NO'
+            Width = 45
+          end
+          object cxGrid1DBTableView1KULLANICI_ACAN: TcxGridDBColumn
+            Caption = 'Protokol A'#231'an'
+            DataBinding.FieldName = 'KULLANICI_ACAN'
+            Width = 69
+          end
+          object cxGrid1DBTableView1KULLANICI_DEGISTIREN: TcxGridDBColumn
+            Caption = 'Protokol De'#287'i'#351'tiren'
+            DataBinding.FieldName = 'KULLANICI_DEGISTIREN'
+            Width = 70
+          end
+        end
+        object cxGrid1Level1: TcxGridLevel
+          GridView = cxGrid1DBTableView1
+        end
+      end
+      object cxLabel7: TcxLabel
+        Left = 888
+        Top = 177
+        AutoSize = False
+        BiDiMode = bdLeftToRight
+        Caption = 'VER:11022023'
+        ParentBiDiMode = False
+        ParentFont = False
+        Style.Font.Charset = TURKISH_CHARSET
+        Style.Font.Color = clBlack
+        Style.Font.Height = -16
+        Style.Font.Name = 'Roboto'
+        Style.Font.Style = []
+        Style.TextColor = clMedGray
+        Style.TextStyle = []
+        Style.IsFontAssigned = True
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
+        Properties.Angle = 90
+        Transparent = True
+        Height = 125
+        Width = 28
+        AnchorX = 902
+        AnchorY = 240
+      end
+      object cxLabel8: TcxLabel
+        Left = 906
+        Top = 206
+        AutoSize = False
+        Caption = 'alisahan.com'
+        ParentFont = False
+        Style.Font.Charset = DEFAULT_CHARSET
+        Style.Font.Color = clWindowText
+        Style.Font.Height = -13
+        Style.Font.Name = 'Tahoma'
+        Style.Font.Style = []
+        Style.TextColor = clHighlight
+        Style.TextStyle = [fsBold]
+        Style.IsFontAssigned = True
+        Properties.Angle = 90
+        Transparent = True
+        Height = 93
+        Width = 29
+      end
+    end
+    object cxTabSheet2: TcxTabSheet
+      Caption = 'Fatura Kesmediklerim'
+      ImageIndex = 1
+      object cxGrid2: TcxGrid
+        Left = 0
+        Top = 0
+        Width = 943
+        Height = 398
+        Align = alClient
+        TabOrder = 2
+        object cxGridDBTableView1: TcxGridDBTableView
+          PopupMenu = PopupMenu2
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          DataController.DataSource = ds_fatura
+          DataController.Summary.DefaultGroupSummaryItems = <
+            item
+              Kind = skCount
+              Position = spFooter
+              Column = cxGridDBTableView1DOSYA_NO
+            end
+            item
+              Kind = skCount
+              Column = cxGridDBTableView1DOSYA_NO
+            end
+            item
+              Format = '###,## '#8378
+              Kind = skSum
+              Position = spFooter
+            end
+            item
+              Format = '###,## '#8378
+              Kind = skSum
+            end>
+          DataController.Summary.FooterSummaryItems = <
+            item
+              Kind = skCount
+              Column = cxGridDBTableView1DOSYA_NO
+            end
+            item
+              Format = '###,## '#8378
+              Kind = skSum
+            end>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.Footer = True
+          OptionsView.GroupByBox = False
+          object cxGridDBTableView1ADI: TcxGridDBColumn
+            Caption = 'Ad'#305
+            DataBinding.FieldName = 'ADI'
+            Width = 133
+          end
+          object cxGridDBTableView1SOYADI: TcxGridDBColumn
+            Caption = 'Soyad'#305
+            DataBinding.FieldName = 'SOYADI'
+            Width = 133
+          end
+          object cxGridDBTableView1DOSYA_NO: TcxGridDBColumn
+            Caption = 'Dosya '
+            DataBinding.FieldName = 'DOSYA_NO'
+            Width = 27
+          end
+          object cxGridDBTableView1PROTOKOL_NO: TcxGridDBColumn
+            Caption = 'Protokol'
+            DataBinding.FieldName = 'PROTOKOL_NO'
+            Width = 28
+          end
+          object cxGridDBTableView1BOLUM_ADI: TcxGridDBColumn
+            Caption = 'B'#246'l'#252'm'
+            DataBinding.FieldName = 'BOLUM_ADI'
+            Width = 80
+          end
+          object cxGridDBTableView1ADI_SOYADI: TcxGridDBColumn
+            Caption = 'Soyad'#305
+            DataBinding.FieldName = 'ADI_SOYADI'
+            Width = 120
+          end
+          object cxGridDBTableView1KURUM_ADI: TcxGridDBColumn
+            Caption = 'Kurum Ad'#305
+            DataBinding.FieldName = 'KURUM_ADI'
+            Width = 228
+          end
+          object cxGridDBTableView1FATURATIPI: TcxGridDBColumn
+            Caption = 'Fatura Tipi'
+            DataBinding.FieldName = 'FATURATIPI'
+            Width = 68
+          end
+          object cxGridDBTableView1CIRO: TcxGridDBColumn
+            DataBinding.FieldName = 'CIRO'
+            Width = 67
+          end
+          object cxGridDBTableView1ODETMEALAN: TcxGridDBColumn
+            Caption = #304#351'lem Yapan KASA'
+            DataBinding.FieldName = 'ODETMEALAN'
+          end
+          object cxGridDBTableView1EKLEYEN: TcxGridDBColumn
+            Caption = 'Ekleyen'
+            DataBinding.FieldName = 'EKLEYEN'
+          end
+        end
+        object cxGridLevel1: TcxGridLevel
+          GridView = cxGridDBTableView1
+        end
+      end
+      object cxLabel5: TcxLabel
+        Left = 896
+        Top = 279
+        AutoSize = False
+        BiDiMode = bdLeftToRight
+        Caption = 'VER:11022023'
+        ParentBiDiMode = False
+        ParentFont = False
+        Style.Font.Charset = TURKISH_CHARSET
+        Style.Font.Color = clBlack
+        Style.Font.Height = -16
+        Style.Font.Name = 'Roboto'
+        Style.Font.Style = []
+        Style.TextColor = clMedGray
+        Style.TextStyle = []
+        Style.IsFontAssigned = True
+        Properties.Alignment.Horz = taCenter
+        Properties.Alignment.Vert = taVCenter
+        Properties.Angle = 90
+        Transparent = True
+        Height = 125
+        Width = 28
+        AnchorX = 910
+        AnchorY = 342
+      end
+      object cxLabel6: TcxLabel
+        Left = 922
+        Top = 302
+        AutoSize = False
+        Caption = 'alisahan.com'
+        ParentFont = False
+        Style.Font.Charset = DEFAULT_CHARSET
+        Style.Font.Color = clWindowText
+        Style.Font.Height = -13
+        Style.Font.Name = 'Tahoma'
+        Style.Font.Style = []
+        Style.TextColor = clHighlight
+        Style.TextStyle = [fsBold]
+        Style.IsFontAssigned = True
+        Properties.Angle = 90
+        Transparent = True
+        Height = 93
+        Width = 29
+      end
+    end
+    object cxTabSheet3: TcxTabSheet
+      Caption = 'Rehber'
+      ImageIndex = 2
+      object cxGrid3: TcxGrid
+        Left = 0
+        Top = 0
+        Width = 943
+        Height = 398
+        Align = alClient
+        TabOrder = 0
+        object cxGrid3DBTableView1: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          DataController.DataSource = ds_rehber
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.Footer = True
+          object cxGrid3DBTableView1TUR: TcxGridDBColumn
+            Caption = 'Personel Tipi'
+            DataBinding.FieldName = 'TUR'
+            Width = 90
+          end
+          object cxGrid3DBTableView1DAHILI: TcxGridDBColumn
+            Caption = 'Dahili'
+            DataBinding.FieldName = 'DAHILI'
+            Width = 46
+          end
+          object cxGrid3DBTableView1AD: TcxGridDBColumn
+            Caption = 'Personel'
+            DataBinding.FieldName = 'AD'
+            Width = 133
+          end
+          object cxGrid3DBTableView1GOREV: TcxGridDBColumn
+            Caption = 'G'#246'revi'
+            DataBinding.FieldName = 'GOREV'
+            Width = 149
+          end
+          object cxGrid3DBTableView1KAT: TcxGridDBColumn
+            Caption = 'Kat'
+            DataBinding.FieldName = 'KAT'
+            Width = 30
+          end
+          object cxGrid3DBTableView1CEP: TcxGridDBColumn
+            Caption = 'Cep'
+            DataBinding.FieldName = 'CEP'
+            Width = 239
+          end
+          object cxGrid3DBTableView1MAIL: TcxGridDBColumn
+            Caption = 'Mail'
+            DataBinding.FieldName = 'MAIL'
+            Width = 237
+          end
+        end
+        object cxGrid3Level1: TcxGridLevel
+          GridView = cxGrid3DBTableView1
+        end
+      end
+    end
+    object cxTabSheet4: TcxTabSheet
+      Caption = 'Do'#287'al Afet'
+      ImageIndex = 3
+      object cxGrid4: TcxGrid
+        Left = 0
+        Top = 0
+        Width = 943
+        Height = 398
+        Align = alClient
+        TabOrder = 0
+        object cxGridDBTableView2: TcxGridDBTableView
+          Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
+          DataController.DataSource = ds_afet
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.Footer = True
+          object cxGridDBTableView2TARIH: TcxGridDBColumn
+            DataBinding.FieldName = 'TARIH'
+          end
+          object cxGridDBTableView2DOSYA_NO: TcxGridDBColumn
+            DataBinding.FieldName = 'DOSYA_NO'
+          end
+          object cxGridDBTableView2ADI_SOYADI: TcxGridDBColumn
+            DataBinding.FieldName = 'ADI_SOYADI'
+          end
+          object cxGridDBTableView2PROTOKOL_NO: TcxGridDBColumn
+            DataBinding.FieldName = 'PROTOKOL_NO'
+          end
+          object cxGridDBTableView2BOLUM: TcxGridDBColumn
+            DataBinding.FieldName = 'BOLUM'
+          end
+          object cxGridDBTableView2BOLUM_ADI: TcxGridDBColumn
+            DataBinding.FieldName = 'BOLUM_ADI'
+          end
+          object cxGridDBTableView2DR_KODU: TcxGridDBColumn
+            DataBinding.FieldName = 'DR_KODU'
+          end
+          object cxGridDBTableView2DOKTOR: TcxGridDBColumn
+            DataBinding.FieldName = 'DOKTOR'
+          end
+          object cxGridDBTableView2PROVIZYON: TcxGridDBColumn
+            DataBinding.FieldName = 'PROVIZYON'
+          end
+          object cxGridDBTableView2TEDAVI: TcxGridDBColumn
+            DataBinding.FieldName = 'TEDAVI'
+          end
+        end
+        object cxGridLevel2: TcxGridLevel
+          GridView = cxGridDBTableView2
+        end
+      end
+    end
+  end
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 5
+    Top = 5
+    Width = 943
+    Height = 38
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
+    Align = alTop
+    Color = clWindowFrame
+    ParentBackground = False
+    TabOrder = 1
+    object cxDateEdit1: TcxDateEdit
+      AlignWithMargins = True
+      Left = 108
+      Top = 4
+      Align = alLeft
+      EditValue = 'Now'
+      Properties.DisplayFormat = 'dd.mm.yyyy'
+      TabOrder = 0
+      Width = 121
+    end
+    object cxDateEdit2: TcxDateEdit
+      AlignWithMargins = True
+      Left = 306
+      Top = 4
+      Align = alLeft
+      EditValue = 'Now'
+      Properties.DisplayFormat = 'dd.mm.yyyy'
+      TabOrder = 1
+      Width = 121
+    end
+    object cxLabel3: TcxLabel
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Margins.Right = 5
+      Align = alLeft
+      Caption = 'Ba'#351'lang'#305#231' Tarihi'
+      ParentColor = False
+      Style.Color = clSilver
+      Style.TextColor = clWhite
+      Properties.Alignment.Horz = taCenter
+      Properties.Alignment.Vert = taVCenter
+      Transparent = True
+      AnchorX = 52
+      AnchorY = 19
+    end
+    object cxLabel4: TcxLabel
+      AlignWithMargins = True
+      Left = 235
+      Top = 4
+      Align = alLeft
+      Caption = 'Biti'#351' Tarihi'
+      ParentColor = False
+      Style.Color = clSilver
+      Style.TextColor = clWhite
+      Properties.Alignment.Horz = taCenter
+      Properties.Alignment.Vert = taVCenter
+      Transparent = True
+      AnchorX = 268
+      AnchorY = 19
+    end
+    object cxButton2: TcxButton
+      AlignWithMargins = True
+      Left = 433
+      Top = 4
+      Width = 96
+      Height = 30
+      Align = alLeft
+      Caption = 'Ara '
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D4948445200000018000000180803000000D7A9CD
+        CA00000300504C544547704CF6F6F6A6A6A6D0D0D0F4F4F4A9A9A99B9B9BB5B5
+        B5F3F3F3DCDCDCF2F2F2F7F7F7F5F5F5F8F8F8888888F2F1F2ACACACBEBEBECA
+        CACAD8D8D8D7D7D7E4E4E4DADADAE8E8E8E0E0E0D2D2D2DCDCDC818181B1B1B1
+        A8A7A7E6E6E6ECECECE9E9E9ECECECE9E9E9C2C2C2EBEBEBE7E7E7EDEDEDE8E8
+        E8E4E4E4F1F1F1D1D1D1C4C4C4E4E4E4DAD8DAE4E4E6E5E5E5E5E5E5E2E2E2D8
+        D8D8EFEFEFFFFFFFE9E9E9E3E3E3EBEBEBEDECECE4E4E4EDEDEDEEEEEEE6E6E6
+        E8E8E8E1E1E1F0F0F0DFDFDFDDDDDDEAEAEADADADAE7E7E7E0E0E0FDFDFDD4D4
+        D4F9F9F9DEDEDED6D6D6FCFCFCDBDBDBD9D9D9D8D8D7D5D5D5FAFAFAFFFAF9D3
+        D3D2F6F6F6EDEDECDBDCDBDDDDDCE8E7E7F2F2F2D3D3D3E3CFF1CFCFCFF1F1F1
+        E7F3F2F2F1F1E1E2E2E7E1DEFAF3F1FCF4F2FFF5F26AD1ECF9F3F266D4EE64D3
+        EDD4EBF1DBEEF2FFFAF8F8F8F9F8EFECFFFFFBF2EBE8FDF3EFFFFDFCFEFCFBFF
+        FFFEEDEEEEE7E6E6D2D2D2EBEBECD9D8D9EEEDEEE9E8E9E6E6E5EDEEEDDEDFDE
+        D6D5D6EEEFEED5D6D5EEEEEFD4D4D5E6E7E6EFF0F0EAEBEBE6E0DDF3F3F3E1DD
+        DBDCDCDCE3E4E3E7E7E8FBF3F2F8F2F0BFD5E0BBE2EEB2CCD9DFEEF1AEC8D6B7
+        CDD997DEEFC9EAF12A9ED7F5F1F0F4F0EEE8E2E0F5EFEDF1EDEC3EBFE5CFE7EE
+        E6EDEF5BCDEA8ED3E970D2ECFFFCF9C7EAF2FBF2EDF8F3F2F5EEECF0EBE9C6E6
+        F061D0EDA6DEEC8BDDF0E3EBEE66CDE9D7ECF1ECEAE9B5E3EEE7F1F3FCF2EEF5
+        EDEAD3E4EA86D4EAF8F0EC4FC6E7A5C9DFE5E5E479B8DAFEF5F2F8F9F975B7DA
+        30A2DAFFFAF649BDE382CCE7AFD9E8F4EDEAF0E8E4F6EDEA42BEE531A0D934A2
+        D7289ED9F4F1EF1394D4BCDEEDF1F5F744B8E2B9D5E4B1CEDDA2D3E7E5E6E835
+        9DD4FFFCFB9AC6DFA7D4E5EEF3F6FFFEF81FA3DAA8D7EAC1D6E3E9F0F3D6E8EF
+        37A9DCEDEAE9FBFCFB1A96D3F3EFEE35A5DA35B5E19ED8EAD2E7EFC1DAE52DAD
+        DE49ABD9BAD2E13CA9DC309FD633A4DACDE7F233A8DAD4EAF432A0D7B6D2E219
+        98D5FBF1ECF5F7F8E8ECEE229CD82D9CD421A7DCBFDBE92C9ED8F2F6F7E2E7EA
+        5FBBE2199CD75DB7E1A91422650000003074524E5300AB74FEF67033B09B9AF9
+        248B613E9B28C0689A9B639A228E909B39A2795F605FFA5DBA272CF92DAF27FE
+        BAFC9AAFFCD17C6B0A000002254944415428CF636000036E5E1E0E7E0E20E2E1
+        E566400075462E1338E062548589CBB3785B995B581B0381B595B9951B8B0244
+        5CCEA3D8C509286E0F04C6D616E6E1D61E4A20711545731B53732BE36989DD4B
+        E2EC8D2BCA4C4B2CD43481121AC196400DD37B264C5994B924D5DED8C2C9D632
+        588F81415CC7C0C0B665E6DCC969E9E969AB32939AABCD2B6D0CF4C51944230C
+        0D6C67AD5E306F65C6DAF5292B32121B2C4C6D0CDB441924620C0D4C976ED936
+        675F56E0C20D6B5262E2424C6DCC222418A48CE30D966D3EFA645FB6474040EE
+        F2D97D49564E3686F6520C9C7576069B0E3E7EBA6F7780B7F7E533FBE7275B99
+        1A181A73328859BBEE3872F5F99D2C0F6F37B7822F670F8024ECAC3919742D1C
+        CCF29EDDB8793DFBBE9B5BD1FB1F177659D85ABA5A8931089B7B1A86DF7B71F7
+        766E614151E1DF775F4F3A35197A9A0B33889876B85A1EBAF5E0D5E96BBFDFFE
+        FFF7E6673E504398A90883A4ADAFA39D41CECB4BA7F63EFAF4FDC3B75FE7F2E2
+        3D9D6D251984AAFC7C1C0C6D722E6EDFB9E7CA9F8FAF4F1CEB9DE1636423C420
+        10646414EA6068B06EEBE28DF90F3F9F3F3EB5BFD5C82852808141D9D2DDC8C7
+        D3D5CCC0A5CBC5C5E0F0A489ED46FE06DAC0D0652BF57537727674B033343333
+        B4734868356A74D662034508AB437950AD9173A8231074381B7945FAD6B042A2
+        9089D9B0DEDDDFCB0F08BCFCDDBDCC98996091CE27186D6766666669D9696666
+        172DC887944EA46565D8C14046561A2202008943B9C0CDC784A6000000004945
+        4E44AE426082}
+      TabOrder = 4
+      OnClick = cxButton2Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 480
+    Width = 953
+    Height = 30
+    Align = alBottom
+    Color = clWindowFrame
+    ParentBackground = False
+    TabOrder = 2
+    object cxLabel1: TcxLabel
+      AlignWithMargins = True
+      Left = 130
+      Top = 4
+      Align = alLeft
+      Caption = 'alisahancom'
+      ParentColor = False
+      Style.Color = clSilver
+      Style.TextColor = clWhite
+      Properties.Alignment.Horz = taCenter
+      Properties.Alignment.Vert = taVCenter
+      Transparent = True
+      OnClick = cxLabel1Click
+      AnchorX = 169
+      AnchorY = 15
+    end
+    object cxLabel2: TcxLabel
+      AlignWithMargins = True
+      Left = 44
+      Top = 4
+      Align = alLeft
+      Caption = 'alisahan.com'
+      ParentColor = False
+      Style.Color = clSilver
+      Style.TextColor = clWhite
+      Properties.Alignment.Horz = taCenter
+      Properties.Alignment.Vert = taVCenter
+      Transparent = True
+      OnClick = cxLabel2Click
+      AnchorX = 84
+      AnchorY = 15
+    end
+    object cxImage1: TcxImage
+      Left = 210
+      Top = 1
+      Align = alLeft
+      Picture.Data = {
+        0D546478536D617274496D61676589504E470D0A1A0A0000000D494844520000
+        0020000000200806000000737A7AF40000000473424954080808087C08648800
+        00000970485973000000EC000000EC01792871BD0000001974455874536F6674
+        77617265007777772E696E6B73636170652E6F72679BEE3C1A000006E8494441
+        545885B5976D8C1D5519C77FCF9933B7775FDAEEF665DB2D2D6D61DBD22A160D
+        054214DB5031F585845A2C6DD0161289448926284AA9066383F603C19898E807
+        102D6910241AAC0D6952234145F8604B95EDD22ADDBE6D5BCB6EF7EDEEDEBD33
+        731E3F9CB973EFDCBB7CD0C4492677E6BCFDFFF37FFECF73CE15EA2EBD7B7D7B
+        E40A5F50177CC269B8CA69B830717696536B9D5AFC1D527BB63867491ADBF263
+        CBCED9C104DBAB6A0FDAC996673F7CF4AEE12AA664E05B6FBB8384E79CDAF955
+        90C4352DD604901FD33C364949D6B5FDDB6978DF2D6F6C399811D02F6DF82453
+        7A808A5A62FCA4E68979E0DC98E9497AF069E7C7B198CFDEFAFAE75F117D60E3
+        6C24F91791CE2552884063FC624D5F17D616CE814F035C6D7B1F8289DA4B1345
+        D36369E37E2299EBE300A822AA98380623C8CA35D81BD6C1E2A5D0D101852220
+        6835822A2892B609AE34852B55A89C1D62FCCDD3948E9C0727A9D892C1186441
+        CBA4ECB084B2099514BC6A0890653D040F3C02D7ACE07FB95A818E7B6E65EAE4
+        2506F61CA4DC3F8AA6144C958CE14ED15D1BCF10B18448A1A210292CEA81479E
+        82D6369828A1C78EE0DE7D17373C8A2B4DA16A500D701AA0312493314E2CB4B4
+        A10404DD5D842B16D3B26E25520C71E353F47F653FE5FEB1463F0C580A320F34
+        55404004763EECC14FFC039EFC2E3A3882AACD6E979A2B693657EE5D3A3BE97A
+        6207856B17B068D726FABFBC1F5C7D024AA72190025620140881EBD6C2B25590
+        C4F0F40F616C082371DD9D602441A669ABBEB77FFA26E63D760F415BC8E51FBC
+        080AC5550B695BDB9D1B2BC45842096A0604D6ACF304CF9C80C1014F0C305192
+        194D0023800DBD6A519CC55EDA5A98FDD016106FD4F7F6FC8AA9BEB3CC58BD84
+        F61B9732F9D6B99A1145B084A9F45503762DF6BFA7FBBC22D5D0A822718C696D
+        23F8CC56E463EB91EE4500B8F317A8BCFA3AE5DF1E269E2811F59D22BC6E3995
+        BFF5612421FAE70033562FA1707527223182601044048BF58B7B5A02B33AFDF3
+        F810BE2FE5AB20DD57137C7B2F7475E71C6FAEEAA6B87D33850D1F65ECF11F31
+        F2CDBD68A19D6422C68825EEBFE0C7B51530E295447D765AC2BA145485C0FA55
+        CBA399FC28506C8347F7C2FC6E18388B7BFE97B8DE3E1C165D7D3DE1B66D9845
+        DDCC7CFCEB8C3CF43D9289718CF8B5DC95110082F62246E29A07C914A0066452
+        5057AE29A0C0A6AD1EFCCA7BB0FB41647402D4825AF44F834C1D3D46F1C74F61
+        BABB68B96B2313FB0F649E219EF29856520269B62118EF7E21CB04635286EA3D
+        10E2FB6EBEDDB7BFFC0B981A474C92CF8AF12B442FFC1A80C2FA5B90BA4C9194
+        00E0C793B64B8CC5D6190D6A044C525320B030378DFBA9DE5A665412EA3654B4
+        EF6DDFBE682126D42C3B248E32898DC4A905BC116D2DCE6931AAAE67A4E681A4
+        CE71965C684C944A8AE0A436D01083182F7358C577A93292966330D83AF94321
+        2B55A1A985C62430E49D4CCF07F3A149E32A1213AC5EE571CE0F605CA556A8AA
+        1FE25C7351CB79C00A992303E3BFB6DA7FEC0FBEFD535F84D9B352D2299100CC
+        AC5682BBB77BC15EFB630E440A3EACA22E8D7FAD1ADA5CB149E304C08C8207AE
+        86E6CD97E086DBA1B31B1EFE09FCFEE7D0770C22E0DAEB91CDF743C71CB83880
+        1E7829CB77453085200B415607B28836141B5C6A98D699E452B43201FB77C3B6
+        3D30FF2AD8B99BA6EBE279F4894731E571546CBAF552231047B53A00A84A6321
+        022A5752029DF942A4C0C839F8D98370D366F8D00698BFC42B74E92CFCF5301C
+        7811192D2112908AEE4DD835C72F736538AB038A608C4873212A9DF7CF5D2BBD
+        07B4A13F9A84D79E83C3FBC0053E04E5C89F25628550FCC6959D82C02C5BEAA7
+        0F0CF82C405282A8F146AACB84A163BE6BFE6A98D999BA9D7CA664452B0113E7
+        CD5A97194662CC82B904EB6E04C01D3DD2B8858BC14AC92F902E32D20BC32721
+        28C0C77741C7C2DA59613A22F56789062266E102EC63DF87C0E2FA8EA3C7FFDE
+        7476107DEB73EF10E9CAEC381629B42C87757B206C83A40297FBE0D23B501A86
+        8931989CF4C529C1CB1E6BFAAE606640FB5C58BE06D6DE0C410063A3C4DFF916
+        C9E973F9D333E105D1B7B7EC23D27B33F02A919665F081AF42474FB3DBFF9BEB
+        642FFAD32771FD67A639DE87872C053904DC9BCB0480897EF8CB37A07D05CCFB
+        08B42F81C26CB02DB5ADBB7E4EF52E4FC2C8100C9C86A36FC089E3C894C3A465
+        397FAA9297454FED2C5219EF25D2E544E455687C8E68786FEC57A8F0BE7D9A04
+        F57F6A2E16273B7A8C2C7FB64C68BE4628CE9B8C66B76786AB336BE31E92BD53
+        DB271AFAEAB6F0484C729F1CDA57320072CD0BBF2334DB0865D84FF8FF113192
+        5C46933B8BBF39F80AD41765404F6FEFA454D941CC6D44C93CA69843AC738828
+        12E90C2ADA3ABDFC4DA199A4A265222D53D121221D24D6412ABC8A8D9E9167FE
+        3C56C5FC0F9DFCF3067B94BB340000000049454E44AE426082}
+      Style.BorderStyle = ebsNone
+      Style.Color = clBtnFace
+      TabOrder = 2
+      Transparent = True
+      OnClick = cxImage1Click
+      Height = 28
+      Width = 40
+    end
+    object cxImage2: TcxImage
+      Left = 1
+      Top = 1
+      Align = alLeft
+      Picture.Data = {
+        0D546478536D617274496D61676589504E470D0A1A0A0000000D494844520000
+        0018000000180806000000E0773DF80000000970485973000000B1000000B101
+        C62D498D0000001974455874536F667477617265007777772E696E6B73636170
+        652E6F72679BEE3C1A00000247494441544889C595414854511486BFF3EECC38
+        99669115B8D145A9A4BB69DF42A1743088F0593BA155B58AA05A480B21A4DAB4
+        09376D5C1838A642121648CB28DAA6A144BB0C4BAC9C8699D4FB4E8B196DE639
+        6FC61AA21F1EBC7BCE3DDF7FEFE5722EFC6F9D9E4A37C5A752317FBCFB71EA44
+        F744BAB15CBD944AC62793ED9ECA1B200AFA04CC156B9090F58615E24006ABB1
+        19B7763E88E19432F0D4B99C8503C819F0E68DF5E672708028C6B9F4573BE84A
+        240F616411D85F0A007C0D45BCE6E99E7D2B650DBA267E5C036E02F565A041FA
+        0C0CCD9CABB9BF15283C22E556057080C3C0407EA0D04058A8009E932E061A28
+        CC56CC175E1435E84DA811A1A162039586DE849ADF7E40C7E4DAC108CE184AC7
+        6E1821072EB44658CD284F3F6CECC80BCC5A6BFB9EBB75AB0E4004E76E10FC54
+        5308B725BC3D3E522DDC3BB987F3AD6122A6580528748A71EE00840044510D58
+        6D5D95D0DF16A1AE4A78BB62B91AAB4280DBAF32BC5CB281BB1445B70DACB5D7
+        8D318D0A9DFE8989850DAA4382DB12E6ECD130EFBF790CBDFEC9A794170C8759
+        89DA1BB9FFAC7A136A5226F550A1BF58515F4B986848187DB7CE66301B84919A
+        CDBD17C75DB190778BC65DB12AFA31A86E6C618391B932704095A52D78814136
+        2B3B8EE84FE5507859FCDDB4B95203F531FC0683C07205FC651506F30381EDBA
+        677AAD7E73DD59040E94817EC7EAB119B7F64BB164E08393EDEF32EA0B27735F
+        FE1A1F05C14B1A0060BD61200DA0F0CC1AA70D9CE3C0746E46C653EF41494639
+        754FA41BE393C9767F3C3E958AEDE6D1FFE7FA0584CABE94C95C682700000000
+        49454E44AE426082}
+      Style.BorderStyle = ebsNone
+      Style.Color = clBtnFace
+      TabOrder = 3
+      Transparent = True
+      OnClick = cxImage2Click
+      Height = 28
+      Width = 40
+    end
+  end
+  object cxGroupBox1: TcxGroupBox
+    Left = 512
+    Top = 496
+    Caption = 'Meddata HastaKabul Yard'#305'mc'#305' Uygulamalar'
+    TabOrder = 3
+    Visible = False
+    Height = 193
+    Width = 441
+    object Image1: TImage
+      Left = 24
+      Top = 40
+      Width = 90
+      Height = 90
+      Center = True
+      Picture.Data = {
+        0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000080
+        000000800806000000C33E61CB0000000473424954080808087C086488000000
+        097048597300000B1300000B1301009A9C1800000D2849444154789CEDDD7990
+        94E59DC0F1EFF374F7F44CCF0173EAC0000303280804184004346E59DEC6E046
+        57CD61B6766BB7DCAD4225A3BB54ED1A97724B922049CC4AC59854D64D523151
+        8CD18DC321592F48905B06865390B9386680B98F3E9E67FFE883EE61661898E3
+        6DC3EF5335D4F4F3BC2FCFD3DDBFF7799EF7E9679E0621841042082184104208
+        21841042082184104208218410420821841042082184109F33CAE90A008C7BE6
+        BDD4ACD6B679A00B9CAECB5053465BAD4DD5A4AAD69DAFBFFE3721C7EBE36CF1
+        564DFFD6BAC794E51934D9CED6657859C371A5ED923DABEEFA5F27EBE168004C
+        2F5BBB42C13227EBE03CFBF09E5577FDC6A9D21D0B80694FBC3347BBF436A7CA
+        4F16C6982697F1177FF2C27D8D4E94AF9D281440B9F4234E959D4CB4D6238C2B
+        75B163E53B5530966BFA7358569A87FC2C2F5A0D5F6335D2E7E1EA91A9B85DC3
+        54A6EADF6B3114DC4E15AC14AEBEF2271766B2FCC1E94C2DCA02A0B13DC04BEB
+        0FF3EAE6AAD8318FDF3D993B6716C61E5B0BCD1D01D6EF3EC92BEF1FC3589BF0
+        7FFEE743D399539283B1F0C0AACDB4750513F2678DCFE6E9AF5C47C9D5190074
+        0542FC6E6B2DCFBFBD9F60C8B2785E118FDE5AC26B7FAAE6E7EF1DBDA0CE6372
+        7DFCF4D1B93D3E9F355BAAF9D91F2F3C074059D3E76B31941C0B80BEA4A7BAF9
+        F13FCC213B238597DFFD94534D9D3CF2C56296DD379586163FEFEE390940767A
+        0A85D969EC387A96AA86767C292E6E9A5AC0E3774F466B125EF014B7E6D62F5C
+        8D5B6BDC2EC59C921C3EA83C1DCBCFC948E1C5BF2F25C5AD59BDEE30F5CD5D7C
+        FDA6621E5E389696F600ABD71F26C3EBA6303B8D4C5FCF2F9BDBA528CC4EA333
+        10E2406D73425E6B67B0C773C2B4B9FC576B60923200BE543A8ABC2C2FBFD95C
+        C5EAF58701A8AC69E2D52716F0CD9B8B630110F5D6B65ADEDA560BC017A716F0
+        A3BF9BCD9DB346250440E9841C523D2E7EBFAD96C57347337F726E4200DC3B67
+        3419A96EFEE7FD63BCBCF153000E9D68E1D78FDFC09DB30B63F5E88FDA331D7C
+        F3C58FFB7DBCC53A1600CE8D01FA306F622E001FEE3FFF0655D634D3D0D2C575
+        634690EEED3D6E3F391E1E4C67A6251EB3684A1E00BFFEE8333AFC21E64FCA4D
+        C8FF42F14800FE7CE84C2CED406D33FEA021273D6500CFE6E29452D202C41B9B
+        E703A0BAA13D21BDBAA19DBC4C2F45B93E0ED635F7742A1323FDF7D1536D09E9
+        8BAECDA7B1CDCFA1132D545435326F622E79595E1A9ABB00189D132EF3646347
+        EC9C90B1CC5DB661709E541F9C6C01923200B27C1EE0C27E33FA7844243F6AF6
+        841C5C5A31323D85AF2D1A4757D0F0F2BB4762F9A373D228CE4FE7FFF69EC25A
+        D875EC1CF326E672FDA45CDED9510740BA373C0EEBF00F7C76B628CFC76BDF5A
+        9890F6EC9A7D5454F576AB2F2D4002970EDF7E99C4413CA14842343F6AF1DCD1
+        2C9E3B3A728EE5CDAD35ECAB6E8AE52FBA361F80ED9F9E05C20100303F2E00A2
+        B799DD6E1C2E8B56E0F5E80BD27AA3A40548D419B90ABDEEC417D1EB095FA59D
+        81C4ABF47B6FED67FDEE93F8BC2EFEE5CB53F8CAF56338D3E267F5BAF0C02D1A
+        00F5CD5D8C2F48A7B92388B5707DDC3820100ABF071EF7C0874555F5EDFCF5F3
+        9BFA7DBC95162051434B1745B93EF2B2BC9C6AEA8CA5E765860763F5917E3BAA
+        B53348434B17B4C02F3EF88C1BA7E433A7240708DFFECD9B14FE7DE53766269C
+        77D58854C617A473EC741BE7DAFC8CCB4F6784CF43CDF971209B9EBD8574AF9B
+        F9FFB671289E6A9845EE02E2EDAF6D01E0DA5159B1B4B41417C505E9B47404A8
+        3BDBD1DBA934770400F0A5845B8BD209D9A47A5C1CAC6BE63B6F56C67EB61E09
+        BFCBD1BB8123275B81F0045454569A87CC340FAD5D41BA0243F7C9AD7401DD6C
+        D87D8287178EE5C185637967671D9D81105FBB711C1E97E60F157517CCF0C58B
+        36E56E5738B617469AFFB5BB4E24CC2236B507C203C1C979BCBAB98AF7F79DE6
+        FEF96378E0863194EF3A415720C4438BC602B0E9404342190559A9CC18373221
+        ED78FDF9BB0EAF475F90DFD41E4838269E7401DDEC3C768EDF6FAD61F1BC2236
+        3C7D334DED01C6E6F938D9D819EBD77BD3D4166E01B222F300374E0907C0C787
+        CF241CB73532209C5B9283D68A4D07EAF9B0B29E9BA6E6B3E1E99B69E9083026
+        D7C799163F2FAE3D9470EE3DA5A3B8A7745442DA93BFD8CD9193E196AB28D7C7
+        2F97CC4FC87F6FDF699EF8EF9D3DD6595A801EFCC7EB7BD97CB08105D7E48567
+        F0B6D6F0C6966A1ADB03B163D6ED3AC19113AD54549D1FF137B474F1EC1BFB48
+        75BBB86A8497D7FE5485B57020D2ADC48E6BEEE2D935FB48F5B848F7BA69E908
+        F0F82B3BF952E928664FC8C1EBD6BCBDAD96355BAA39DBEA0760FBD1B3AC7CEB
+        408FF53D58D74C635BA0D7FCEA33ED3DA68739D70238B61E6046D9DA8DC02D4E
+        959F4CACB24B2B9EBFEB874E949D9483C02B8D3238B636500220093839089400
+        48024E0E0225009280B2D2025CD18CCB48005CC9A405B8C21907978449002401
+        8574015734259F057C9E9856D0D5C6704229DBA0504D28DB6E2D41853558ED46
+        DB142C3EACCA3490A321CF680A35E4F7F83F5AF92C2039595B85521F015B8DB1
+        9F68EDDABF67D51DF5A02E6BDDD0FCA5BF4DEBD499E38DD15350A199287D03C6
+        2C544A9685270F6BABAC523FB556ADD9FBFD3B0E5EEE9BDD932D3F78B003A88C
+        FCBC0150FACCDBBEB6AE94B4C12AE352490044198CD52C4B692DF8E18E97E704
+        2E7EC2E0D8B1FCDE76A0AF8F0A8794044084C5ACAD5875F74AA7EB31DCE42E20
+        42693D6C577D329116E0124D5C52EECD48A1246828562E3B5A19956B214B297C
+        445F4FAB0228DB8EE59C55D4A3542DC1D0D16B6BDB8F27C3B630F124002E62FE
+        D2DFA6B5B9B26EB396DBB561A1D15C67C0A5356015A81E56D5A8C83FD13C0BB8
+        5CEC1F9BD931A3AC7C97457D88A6BCC2B76533CB973B7607001200BD9A51B63E
+        DD62FEBD0DFE5959B214801E589FA9210DD402050B302C9BD63AEF335556BEA2
+        22E3E39F3915083206E88525B84AC1320559173FFAF26874B142FD647ACB7CC7
+        764B9100E845C89DF29CB10CE90E5E061300BB5A29FDFA5096D317E9027A51F9
+        DD5BAB807B673EB5615228147A40296E33302FDC8C0F84396BACDEACB16BDD01
+        B566F77FDD553F2815BE4C120017B17BE56D8781E780E74AFF71BB27E8AB9F6C
+        5D5C036ABCC58CC290AFB4CA049B6E8D0DFFD9B2D27EA568C7D204E634A86AAB
+        EC1137B672D7AABBAB06737671A024002E416486705FE4E72F828C0122AC2569
+        AECAE12401D02B3B6C7F3433A36C7DFA7095D59D7401BD985EB6EE0565CB0FDB
+        14F3AB8AEFDC736E28CA9859563ED558FE094C1170DF509471311200BD50D68E
+        45A92536A056CD285BFBA1B5F63DB4FA5859BD67CFAADB2E634D805553FF75E3
+        181DF0CF56A845D672BB414D4381C1AE1B9A677171120017A1D11EE016A5D42D
+        E1518261DAD2F226CDDAE346DB3A856A50D8268BEAC0DA004A29ACF558A57CDA
+        DA11600B8CA210D64DD041D250E15E7718373EED9304C065D05A8F006668D48C
+        708A8A4CFF47DE5515FF5825F5402B99EB268681B40097486BC59B4F2D4A485B
+        FACA2E8E9E6A4D489B5498C9F38F9CDF93E85CAB9FBF5DDDFFDD43878B044094
+        EDBE295DCF14509C9F78D736B724E7820098539293705C666AE2DE86F1B4716E
+        6650BA8001886E55347BC285DF76337B7C76C231C94A0260002A6BC25BD344DF
+        EC78B32269BD6D699B2C24000660E7D1F0FC50C188548A727DB1F4A25C1FF959
+        5E3A0321F6C6ED589A8C240006E06C9B9F63A7C35BBF95C67503D1AB7FCFF146
+        82A1E4EE03240006684764BBB9F86E60D6F8F01E81DB3FEDE70CB276EE832809
+        8001DA7134120013726269B38AB313F2929904C0006D8F8C03C6E6F9C8CBF432
+        D2E7617C4106FEA0A1E2B823DF047749641E20C2EACBBB173FDDD449CD99768A
+        727DCC9E908D3F68500AF65637D1157474C577BF48000C821D47CF45022027B6
+        A974F4BB09929D74018320360E189F1DBB03D8F939E8FF415A8041B123320E98
+        54988131E16F36D9FD59FFFB7F6BFA370D3D149C6B010C7EC7CA1E643567DA39
+        D5D489560AB74BB1AFBA6950BE7B6838381700CAEC75ACEC21106D05BAFF9EEC
+        1C0B0083EBE706E736491E6CF1F7FC9F87FBFF28C7C6007BBF7FC781E94F963F
+        89553F70AA0EF1945599F18F2D74F5B46ACB5A786943F82BE9A2DF3E06F05165
+        3D2F6586D377C6B5009B0ED4D3D8E6A7BDAF2E4169C7BA43C757A64D2F2BBF5F
+        6157809EE8745DACB52B7232D3BEFDC1F2BF0A4E7B6CE355DAED5F6194FD7A64
+        5DE0D030EC0999D043FB5EB867FF9095D107C70320CCAAA94BD797F8CF1EBA3F
+        D0DAF4D558B232CAC62FCF0F2995B8983204DDA7D1BB1DD17D79BF5126314169
+        65E31683587FE79ADA3F7CF7DBD1C7339794E71B0FF703B71BA516F4B6D5DBA5
+        30C6D4A1F5466DD4AB7BB2FEBCC1C93D02922400C2AEBEFDB14795523F76B616
+        F62727D6FDE8D15EF2D4ACA7DE2D0C868253509460D568B00528958D31194AE1
+        B516B7451BB40928431B5A372A6C03961AAC3E6C3D666FC5F7EEAC4D96BF0F94
+        79804BA2ECAE95D40175C01F9DAECD6048AA00505A57186312BE3B4777BF5254
+        F745563D5C49DDFFCEAFDB39B6FB39F67CBE5224DFCA4D218410420821841042
+        08218410420821841042082184104208218410420821841042082100FE1FF3B0
+        C71153E6ED960000000049454E44AE426082}
+    end
+    object lbl1: TLabel
+      Left = 120
+      Top = 40
+      Width = 69
+      Height = 15
+      Caption = 'Kullan'#305'c'#305' Ad'#305
+    end
+    object lbl2: TLabel
+      Left = 120
+      Top = 64
+      Width = 88
+      Height = 15
+      Caption = #350'ifre Password'
+    end
+    object lbl3: TLabel
+      Left = 120
+      Top = 93
+      Width = 75
+      Height = 15
+      Caption = 'Database ad'#305
+    end
+    object edt_server: TEdit
+      Left = 224
+      Top = 95
+      Width = 193
+      Height = 23
+      TabOrder = 2
+      Text = 'orcl'
+    end
+    object edt_pass: TEdit
+      Left = 224
+      Top = 64
+      Width = 193
+      Height = 23
+      PasswordChar = '*'
+      TabOrder = 1
+      Text = 'serkan'
+    end
+    object edt_username: TcxComboBox
+      Left = 224
+      Top = 37
+      TabOrder = 0
+      Text = 'edt_username'
+      Width = 193
+    end
+    object btnloginbuton: TcxButton
+      Left = 342
+      Top = 122
+      Width = 75
+      Height = 25
+      Caption = 'Giri'#351
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        610000001974455874536F6674776172650041646F626520496D616765526561
+        647971C9653C0000000B744558745469746C6500557365723B975B0A02000003
+        0449444154785E85CC6D4C556500C0F1FF73EEB9F71C5E5FBA5084805E3404A1
+        975D6CE29AB7E8D22460319AAEDC5C21B33E54AB451F5A35E9E56BAE56B636B7
+        F28BB659EB8353D3694CAE696AD666990485621AD20A887B41CE3DF79EF33C4F
+        B5F1810F6EFCB6FFD7BFD05AB380BE5516AED25D9E4F9FA774D4937AC2F179F3
+        C094FC5CFF875B30582423A92B0C87F7B76DDB14DBD2D793DFF154476D6EBEBD
+        AFABC67E6BE3F250E19203A9F57335D146DB3405233FFCC4A9A36789D4AF3402
+        42F75B01F1FA92035F51190C99240E9DA168F95A5ED8F90EF1AE566105835352
+        E9C62507AED4174F7F754ABF7DF8345B5FD9465585C6B61C2A8B73429E54D3DC
+        82C922E7936A4F6743F16B01D30C79C92BDC9CF9079975F1323E2349B55B0851
+        0068C05B48192C32EAA8B9F29A8A9FC72F9DC3999921353DC58DCBD7F92395FD
+        FD91BA3BBBDF68A9FE7A476CD9E44B4DA5C77BEB8B9E010C03A03F6423843081
+        8289F1E4E8F03787F96DF82FC62E8D3272710CDBB2F362D1C8CB8FF7B4AF7BF5
+        8317EDCDBD6DB11591B25DDDCBAC5E010058D5C2A8ED3082BB23A525EB538D15
+        94952A5C27C3F09843459E64D3F39DDCDBBC8623FB8F9375D314151ABCF7FEE0
+        800198F586B1666B4EEE60DBC696F5F127BA71FD42D6753D464D53145FD99896
+        66F53D11B497269B76C8A4E7893616E366D503269077BF11E8ABBFBB215C19A9
+        66F697215626A7F96CE7217CE973873B87E364484E4E717B384467671D2A9362
+        60600847AAB326505082D850BEA20AE7C63899C9BFA9F67D4AB3B34CBA2E9743
+        3EED4FC6290B07F9F3DA35F28359BE3D33CAC16357BD79C9972660E70A515E50
+        52C4FCD075B421F09464DAF3B86249DAB7B7126BB98BC4B1EFF9785782D9B464
+        CE57171CC99EA1349F9A005A0B007CC7416B8DA3E1AAE5F3684F9C58BC969347
+        CEB3F7C3419A119C4B6AEF043C0BFC08481348FEAAE5DE839FECDB2E354820A5
+        2466433E0F3EBC9AC4D1EFF8E8DD13E42415178009F80218BF79E0217FED9604
+        0026500634004D0BB53CBD2A4F6FAEB2F486DB0227038256A019B80F28078275
+        39F07FFF024D534A4D4C5CABB90000000049454E44AE426082}
+      OptionsImage.ImageIndex = 5
+      TabOrder = 4
+    end
+    object btn1: TcxButton
+      Left = 261
+      Top = 122
+      Width = 75
+      Height = 25
+      Caption = #304'ptal'
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        610000001D744558745469746C6500436C6F73653B457869743B426172733B52
+        6962626F6E3B4603B9E8000002AD49444154785E85934B4C546714C77FF73232
+        0C041DC2237644C368F109868D98A0290BDA60E2DE9526921856C3C2A08C2E1A
+        A336A64DB48D81A8892D6E241A7CA20B1530261849DA4D47596818082F015118
+        0698B973DFB7773EB1333BEE97FFCD3927DFF97DE77B1CE9E3AF17293FF3B30C
+        48426B7D9939765A1290337AE1DC4B8F2CD73B0E802306C24CEB9BE7ACFA6206
+        86650FECFCE55283079025DBAE2F3D5CB79A94B58E206692C5CF1606933DAF7F
+        006451BA69986099A8C3C38C3C7846D791D3BCB97413351A151AFCADD38D8589
+        DE7F412A3A426A388AC801D92300A689E36A2A1225129923D8D1C9FC9387FCDD
+        D587244BC4037BDC581B91AB97716C93F2AA6D989A004802A0AF28382EF19F3B
+        FD34F4F7515852C4E2AE20FFFED10140CDC9101B0ABD54B4FFCEAB1F7F62D3F9
+        0AB4643203589E9C469F9926B8BF8AF947DD94B5849072246A5A43E040913F9F
+        BC75394C3DEE2658BB9BD4F07BE2E3B35915A83AFAA719766CCDE7C3403F43C8
+        6C6D6EC65FE8C391C0B660E8FA359203BD546EF7A34E4C60A49C2C8066602514
+        B4D94F98F12596150DDB721043DC84CC4A3A168FA14FA75CA085A17D05885B30
+        D280548AE8FB39947D8D048E3661D936DE5C99BC5C8FB0BF3BD684527B88D1D1
+        18B6AAE22E9A5D8186954C105B50680C87503D3EF2BDEE9E6FFD0940F9F11380
+        8FFA700BBD4FEEB2A94842D73D990A74DDC45C49B2A37A336FDB4E5122AB8C5F
+        6FE7CBBDDB7C763571A39D328FCEBB702BDF6F2FC352750C4DCFBC0343750189
+        243E3381131BE369DD018A4BD71328CE136730D7D3CDD3CEBFD8B2A518AF99C0
+        4C030CFEDF82EBE802602C2CE22DC8676F7500633981E2DE0C1694FAFD6C2C29
+        419D8FA12515B06C4C43461080822B6595CF7D927410475A3DF9ACA6B0859FDD
+        50C2566C7BF0ECD258A3E846200FF066B5AAB4462B3B800628FF0122CC6063F4
+        5F96130000000049454E44AE426082}
+      OptionsImage.ImageIndex = 12
+      TabOrder = 3
+      OnClick = btn1Click
+    end
+  end
+  object dxSkinController1: TdxSkinController
+    NativeStyle = False
+    SkinName = 'Sharp'
+    ShowFormShadow = bTrue
+    Left = 300
+    Top = 234
+  end
+  object OraSession1: TOraSession
+    Username = 'hastane'
+    Server = 'xe'
+    Left = 421
+    Top = 229
+    EncryptedPassword = '97FF9EFF8CFF8BFF9EFF91FF9AFF'
+  end
+  object qr_gss: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      
+        'select k.ADI,k.SOYADI,k.DOSYA_NO,p.PROTOKOL_NO,b.BOLUM_ADI,d.ADI' +
+        '_SOYADI,kr.KURUM_ADI,p.GSS_TAKIP_NO,p.GSS_BASVURU_NO,p.KULLANICI' +
+        '_ACAN,'
+      'p.KULLANICI_DEGISTIREN '
+      
+        'from HASTANE.KURUM kr,hastane.protokol p,hastane.kimlik k,hastan' +
+        'e.islemyap a,hastane.dradi d,hastane.bolum b'
+      ' where '
+      ' p.GTARIH between :tar1 and :tar2  and'
+      ' p.PROTOKOL_NO=a.protokol_no(+) and '
+      ' p.DOSYA_NO=k.DOSYA_NO(+) and '
+      ' p.DOSYA_NO=a.DOSYA_NO(+) and '
+      ' p.DR_KODU=d.DR_KODU(+) and '
+      ' p.BOLUM=b.BOLUM(+) and'
+      ' p.KURUM_NO=kr.KURUM_NO and '
+      ' kr.gssmi='#39'T'#39' and p.GSS_TAKIP_NO is null and p.hasta_a_y=1'
+      ' group by '
+      
+        ' k.ADI,k.SOYADI,k.DOSYA_NO,p.PROTOKOL_NO,b.BOLUM_ADI,d.ADI_SOYAD' +
+        'I,kr.KURUM_ADI,p.GSS_TAKIP_NO,p.GSS_BASVURU_NO,p.KULLANICI_ACAN,' +
+        'p.KULLANICI_DEGISTIREN')
+    Left = 85
+    Top = 405
+    ParamData = <
+      item
+        DataType = ftDateTime
+        Name = 'tar1'
+        Value = 44958d
+      end
+      item
+        DataType = ftDateTime
+        Name = 'tar2'
+        Value = 44986d
+      end>
+    object qr_gssADI: TStringField
+      FieldName = 'ADI'
+      Size = 50
+    end
+    object qr_gssSOYADI: TStringField
+      FieldName = 'SOYADI'
+      Size = 50
+    end
+    object qr_gssDOSYA_NO: TFloatField
+      FieldName = 'DOSYA_NO'
+    end
+    object qr_gssPROTOKOL_NO: TFloatField
+      FieldName = 'PROTOKOL_NO'
+    end
+    object qr_gssBOLUM_ADI: TStringField
+      FieldName = 'BOLUM_ADI'
+      Size = 30
+    end
+    object qr_gssADI_SOYADI: TStringField
+      FieldName = 'ADI_SOYADI'
+      Size = 45
+    end
+    object qr_gssKURUM_ADI: TStringField
+      FieldName = 'KURUM_ADI'
+      Size = 130
+    end
+    object qr_gssGSS_TAKIP_NO: TStringField
+      FieldName = 'GSS_TAKIP_NO'
+    end
+    object qr_gssGSS_BASVURU_NO: TStringField
+      FieldName = 'GSS_BASVURU_NO'
+    end
+    object qr_gssKULLANICI_ACAN: TStringField
+      FieldName = 'KULLANICI_ACAN'
+      Size = 32
+    end
+    object qr_gssKULLANICI_DEGISTIREN: TStringField
+      FieldName = 'KULLANICI_DEGISTIREN'
+      Size = 32
+    end
+  end
+  object ds_gss: TDataSource
+    DataSet = qr_gss
+    Left = 141
+    Top = 405
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 237
+    Top = 309
+    object DosyaKopyala1: TMenuItem
+      Caption = 'Kopyala + Dosya'
+      OnClick = DosyaKopyala1Click
+    end
+    object KopyalaProtokol1: TMenuItem
+      Caption = 'Kopyala + Protokol'
+      OnClick = KopyalaProtokol1Click
+    end
+  end
+  object qr_fatura: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      '/* Formatted on 11/02/2023 23:10:46 (QP5 v5.388) */'
+      '  SELECT k.ADI,'
+      '         k.SOYADI,'
+      '         k.DOSYA_NO,'
+      '         p.PROTOKOL_NO,'
+      '         b.BOLUM_ADI,'
+      '         d.ADI_SOYADI,'
+      '         kr.KURUM_ADI,'
+      
+        '         decode (a.FATURA_TIPI,0,'#39'AnaKurum'#39',1,'#39'Fark'#39',2,'#39'TSS'#39',3,'#39 +
+        'ExtraFark'#39')  FaturaTipi,'
+      '    '
+      '        sum( a.ucreti) Ciro,'
+      '        v.VEZNE_ADI OdetmeAlan,a.LOGIN Ekleyen'
+      '      '
+      '         '
+      '         '
+      '    FROM HASTANE.KURUM   kr,'
+      '         hastane.protokol p,'
+      '         hastane.kimlik  k,'
+      '         hastane.islemyap a,'
+      '         hastane.dradi   d,'
+      '          hastane.islemtipi   i,'
+      
+        '          hastane.malzeme   m,hastane.veznekasa vk,hastane.vezne' +
+        'adi v,'
+      '         hastane.bolum   b'
+      '      '
+      '        '
+      '   WHERE     p.GTARIH BETWEEN :tar1 AND :tar2'
+      '         AND p.PROTOKOL_NO = a.protokol_no(+)'
+      '         AND p.DOSYA_NO = k.DOSYA_NO(+)'
+      '         AND p.DOSYA_NO = a.DOSYA_NO(+)'
+      '         AND p.DR_KODU = d.DR_KODU(+)'
+      '         AND p.BOLUM = b.BOLUM(+)'
+      '         AND p.KURUM_NO = kr.KURUM_NO(+)'
+      
+        '         and a.KODU = i.KODU(+) and a.MALZEME_KODU = m.MALZEME_N' +
+        'O(+) and a.KASA_NO = vk.KASA_NO(+) and vk.KASA_NO = v.VEZNE_KODU' +
+        '(+)'
+      '         AND a.FATURA_NO IS NULL'
+      'GROUP BY  k.ADI,'
+      '         k.SOYADI,'
+      '         k.DOSYA_NO,'
+      '         p.PROTOKOL_NO,'
+      '         b.BOLUM_ADI,'
+      '         d.ADI_SOYADI,'
+      '         kr.KURUM_ADI,'
+      
+        '         decode (a.FATURA_TIPI,0,'#39'AnaKurum'#39',1,'#39'Fark'#39',2,'#39'TSS'#39',3,'#39 +
+        'ExtraFark'#39') ,     v.VEZNE_ADI ,a.LOGIN '
+      '      ')
+    Left = 85
+    Top = 357
+    ParamData = <
+      item
+        DataType = ftDateTime
+        Name = 'tar1'
+        Value = 44927d
+      end
+      item
+        DataType = ftDateTime
+        Name = 'tar2'
+        Value = 44986d
+      end>
+    object qr_faturaADI: TStringField
+      FieldName = 'ADI'
+      Size = 50
+    end
+    object qr_faturaSOYADI: TStringField
+      FieldName = 'SOYADI'
+      Size = 50
+    end
+    object qr_faturaDOSYA_NO: TFloatField
+      FieldName = 'DOSYA_NO'
+    end
+    object qr_faturaPROTOKOL_NO: TFloatField
+      FieldName = 'PROTOKOL_NO'
+    end
+    object qr_faturaBOLUM_ADI: TStringField
+      FieldName = 'BOLUM_ADI'
+      Size = 30
+    end
+    object qr_faturaADI_SOYADI: TStringField
+      FieldName = 'ADI_SOYADI'
+      Size = 45
+    end
+    object qr_faturaKURUM_ADI: TStringField
+      FieldName = 'KURUM_ADI'
+      Size = 130
+    end
+    object qr_faturaFATURATIPI: TStringField
+      FieldName = 'FATURATIPI'
+      Size = 9
+    end
+    object qr_faturaCIRO: TFloatField
+      FieldName = 'CIRO'
+    end
+    object qr_faturaODETMEALAN: TStringField
+      FieldName = 'ODETMEALAN'
+      Size = 25
+    end
+    object qr_faturaEKLEYEN: TStringField
+      FieldName = 'EKLEYEN'
+      Size = 32
+    end
+  end
+  object ds_fatura: TDataSource
+    DataSet = qr_fatura
+    Left = 141
+    Top = 357
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 341
+    Top = 309
+    object MenuItem1: TMenuItem
+      Caption = 'Kopyala + Dosya'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Kopyala + Protokol'
+      OnClick = MenuItem2Click
+    end
+  end
+  object ds_rehber: TDataSource
+    DataSet = qr_rehber
+    Left = 293
+    Top = 405
+  end
+  object qr_rehber: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      
+        'select ad,gorev,kat,dahili,cep,mail,decode(tipi,'#39'S'#39','#39'Sekreter'#39','#39 +
+        'D'#39','#39'Doktor'#39','#39'Y'#39','#39'Y'#246'netim'#39','#39'H'#39','#39'Hem'#351'ire'#39')Tur from hastane.rehber '
+      ''
+      'order by ad asc')
+    Left = 237
+    Top = 405
+    object qr_rehberAD: TStringField
+      FieldName = 'AD'
+      Size = 100
+    end
+    object qr_rehberGOREV: TStringField
+      FieldName = 'GOREV'
+      Size = 100
+    end
+    object qr_rehberKAT: TStringField
+      FieldName = 'KAT'
+      Size = 100
+    end
+    object qr_rehberDAHILI: TStringField
+      FieldName = 'DAHILI'
+      Size = 100
+    end
+    object qr_rehberCEP: TStringField
+      FieldName = 'CEP'
+      Size = 100
+    end
+    object qr_rehberMAIL: TStringField
+      FieldName = 'MAIL'
+      Size = 100
+    end
+    object qr_rehberTUR: TStringField
+      FieldName = 'TUR'
+      Size = 8
+    end
+  end
+  object ds_afet: TDataSource
+    DataSet = qr_afet
+    Left = 653
+    Top = 277
+  end
+  object qr_afet: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      '/* Formatted on 14/02/2023 18:03:54 (QP5 v5.388) */'
+      
+        '  SELECT TO_CHAR (P.GTARIH, '#39'DD.MM.YYYY'#39')                       ' +
+        '         TARIH,'
+      '         P.DOSYA_NO,'
+      '         K.ADI || '#39' '#39' || K.SOYADI ADI_SOYADI,'
+      '         P.PROTOKOL_NO,'
+      '         P.BOLUM,'
+      '         B.BOLUM_ADI,'
+      '         P.DR_KODU,'
+      '         D.ADI_SOYADI DOKTOR,'
+      
+        '         DECODE (P.MEDULA_PROVIZYON_TIPI, '#39'D'#39', '#39'DO'#286'AL AFET'#39')    ' +
+        '        PROVIZYON,'
+      
+        '         DECODE (P.MEDULA_TAKIP_TURU,  '#39'A'#39', '#39'AYAKTAN'#39',  '#39'Y'#39', '#39'YA' +
+        'TAN'#39')    TEDAVI'
+      '    FROM hastane.PROTOKOL P,'
+      '         hastane.BOLUM   B,'
+      '         hastane.KIMLIK  K,'
+      '         hastane.DRADI   D'
+      '   WHERE     P.GTARIH between :tar1 and :tar2 '
+      '         AND P.MEDULA_PROVIZYON_TIPI = '#39'D'#39
+      '         AND P.BOLUM = B.BOLUM'
+      '         AND K.DOSYA_NO = P.DOSYA_NO'
+      '         AND P.DR_KODU = D.DR_KODU'
+      'ORDER BY P.GTARIH, P.DOSYA_NO')
+    Left = 597
+    Top = 277
+    ParamData = <
+      item
+        DataType = ftDateTime
+        Name = 'tar1'
+        Value = 44958d
+      end
+      item
+        DataType = ftDateTime
+        Name = 'tar2'
+        Value = 44986d
+      end>
+    object qr_afetTARIH: TStringField
+      FieldName = 'TARIH'
+      Size = 10
+    end
+    object qr_afetDOSYA_NO: TFloatField
+      FieldName = 'DOSYA_NO'
+      Required = True
+    end
+    object qr_afetADI_SOYADI: TStringField
+      FieldName = 'ADI_SOYADI'
+      Size = 101
+    end
+    object qr_afetPROTOKOL_NO: TFloatField
+      FieldName = 'PROTOKOL_NO'
+      Required = True
+    end
+    object qr_afetBOLUM: TFloatField
+      FieldName = 'BOLUM'
+    end
+    object qr_afetBOLUM_ADI: TStringField
+      FieldName = 'BOLUM_ADI'
+      Size = 30
+    end
+    object qr_afetDR_KODU: TFloatField
+      FieldName = 'DR_KODU'
+    end
+    object qr_afetDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 45
+    end
+    object qr_afetPROVIZYON: TStringField
+      FieldName = 'PROVIZYON'
+      Size = 10
+    end
+    object qr_afetTEDAVI: TStringField
+      FieldName = 'TEDAVI'
+      Size = 7
+    end
+  end
+end
