@@ -30,14 +30,15 @@ uses
   OraCall, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator,
   dxDateRanges, dxScrollbarAnnotations, cxDBData, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGridLevel, cxGridCustomView, cxGrid,
-  Vcl.Clipbrd, System.Win.Registry, cxCurrencyEdit;
+  Vcl.Clipbrd, System.Win.Registry, cxCurrencyEdit, dxNavBarCollns,
+  dxNavBarBase, dxNavBar, Vcl.OleCtrls, SHDocVw, cxGridExportLink;
 
 type
   TForm1 = class(TForm)
     cxPageControl1: TcxPageControl;
     Panel1: TPanel;
-    cxTabSheet1: TcxTabSheet;
-    cxTabSheet2: TcxTabSheet;
+    tab_gss: TcxTabSheet;
+    tab_fatura: TcxTabSheet;
     Panel2: TPanel;
     cxLabel1: TcxLabel;
     cxLabel2: TcxLabel;
@@ -50,8 +51,7 @@ type
     dxSkinController1: TdxSkinController;
     cxLabel5: TcxLabel;
     cxLabel6: TcxLabel;
-    cxButton2: TcxButton;
-    OraSession1: TOraSession;
+    btn_ara: TcxButton;
     qr_gss: TOraQuery;
     ds_gss: TDataSource;
     qr_gssADI: TStringField;
@@ -97,9 +97,6 @@ type
     cxGridDBTableView1ADI_SOYADI: TcxGridDBColumn;
     cxGridDBTableView1KURUM_ADI: TcxGridDBColumn;
     cxGridDBTableView1FATURATIPI: TcxGridDBColumn;
-    PopupMenu2: TPopupMenu;
-    MenuItem1: TMenuItem;
-    MenuItem2: TMenuItem;
     cxGroupBox1: TcxGroupBox;
     Image1: TImage;
     lbl1: TLabel;
@@ -110,7 +107,7 @@ type
     edt_username: TcxComboBox;
     btnloginbuton: TcxButton;
     btn1: TcxButton;
-    cxTabSheet3: TcxTabSheet;
+    tab_rehber: TcxTabSheet;
     ds_rehber: TDataSource;
     qr_rehber: TOraQuery;
     qr_rehberAD: TStringField;
@@ -144,7 +141,7 @@ type
     qr_faturaEKLEYEN: TStringField;
     cxGridDBTableView1ODETMEALAN: TcxGridDBColumn;
     cxGridDBTableView1EKLEYEN: TcxGridDBColumn;
-    cxTabSheet4: TcxTabSheet;
+    tab_afet: TcxTabSheet;
     ds_afet: TDataSource;
     qr_afet: TOraQuery;
     cxGrid4: TcxGrid;
@@ -170,12 +167,33 @@ type
     qr_afetDOKTOR: TStringField;
     qr_afetPROVIZYON: TStringField;
     qr_afetTEDAVI: TStringField;
+    dxNavBar1: TdxNavBar;
+    bar_hk: TdxNavBarGroup;
+    bar_faturalama: TdxNavBarGroup;
+    bar_duyuru: TdxNavBarGroup;
+    dxNavBar1Item1: TdxNavBarItem;
+    dxNavBar1Item2: TdxNavBarItem;
+    dxNavBar1Item3: TdxNavBarItem;
+    dxNavBar1Item4: TdxNavBarItem;
+    tab_duyuru: TcxTabSheet;
+    WebBrowser1: TWebBrowser;
+    ExportExcelaktar1: TMenuItem;
+    GSSListesi1: TMenuItem;
+    FaturaListesi1: TMenuItem;
+    Rehber1: TMenuItem;
+    DoalAfet1: TMenuItem;
+    N1: TMenuItem;
+    SaveDialog1: TSaveDialog;
+    GSSAlnmyan1: TMenuItem;
+    FaturaKesilmiyen1: TMenuItem;
+    KopyalaDosya1: TMenuItem;
+    KopyalaProtokol2: TMenuItem;
     procedure cxLabel1Click(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure cxImage1Click(Sender: TObject);
     procedure cxLabel2Click(Sender: TObject);
     procedure cxImage2Click(Sender: TObject);
-    procedure cxButton2Click(Sender: TObject);
+    procedure btn_araClick(Sender: TObject);
     procedure DosyaKopyala1Click(Sender: TObject);
     procedure KopyalaProtokol1Click(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
@@ -183,10 +201,28 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnloginbutonClick(Sender: TObject);
+    procedure dxNavBar1Item4Click(Sender: TObject);
+    procedure dxNavBar1Item3Click(Sender: TObject);
+    procedure dxNavBar1Item2Click(Sender: TObject);
+    procedure dxNavBar1Item1Click(Sender: TObject);
+    procedure bar_duyuruClick(Sender: TObject);
+    procedure edt_passKeyPress(Sender: TObject; var Key: Char);
+    procedure GSSListesi1Click(Sender: TObject);
+    procedure FaturaListesi1Click(Sender: TObject);
+    procedure DoalAfet1Click(Sender: TObject);
+    procedure KopyalaDosya1Click(Sender: TObject);
+    procedure KopyalaProtokol2Click(Sender: TObject);
   private
+    procedure v_fatura_sorgula;
+    procedure v_afet_sorgula;
+    procedure v_gss_sorgula;
+    procedure v_rehber_sorgula;
+    procedure m_login;
     { Private declarations }
   public
     { Public declarations }
+    secim: string;
   end;
 
 var
@@ -194,32 +230,39 @@ var
 
 implementation
 
+uses
+  datamodul;
+
 {$R *.dfm}
+
+procedure TForm1.bar_duyuruClick(Sender: TObject);
+begin
+  WebBrowser1.Navigate('alisahan.com');
+  WebBrowser1.Silent := true;
+end;
 
 procedure TForm1.btn1Click(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
-procedure TForm1.cxButton2Click(Sender: TObject);
+procedure TForm1.btnloginbutonClick(Sender: TObject);
 begin
-  //GSS Sorgusu
-  qr_gss.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
-  qr_gss.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
-  qr_gss.Execute;
-  cxGrid1DBTableView1.ApplyBestFit();
+  m_login;
+end;
 
-  //fatura Sorgusu
-  qr_fatura.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
-  qr_fatura.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
-  qr_fatura.Execute;
-  cxGridDBTableView1.ApplyBestFit();
+procedure TForm1.btn_araClick(Sender: TObject);
 
-  //Afet Sorgusu
-  qr_afet.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
-  qr_afet.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
-  qr_afet.Execute;
-  cxGridDBTableView2.ApplyBestFit();
+begin
+  if cxPageControl1.ActivePageIndex = 0 then
+    v_gss_sorgula;
+  if cxPageControl1.ActivePageIndex = 1 then
+    v_fatura_sorgula;
+  if cxPageControl1.ActivePageIndex = 2 then
+    v_rehber_sorgula;
+  if cxPageControl1.ActivePageIndex = 3 then
+    v_afet_sorgula;
+
 end;
 
 procedure TForm1.cxImage1Click(Sender: TObject);
@@ -246,9 +289,126 @@ begin
     nil, nil, SW_SHOWNORMAL);
 end;
 
+procedure TForm1.v_fatura_sorgula;
+begin
+  // fatura Sorgusu
+  qr_fatura.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
+  qr_fatura.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
+  qr_fatura.Execute;
+  cxGridDBTableView1.ApplyBestFit;
+end;
+
+procedure TForm1.v_afet_sorgula;
+begin
+  // Afet Sorgusu
+  qr_afet.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
+  qr_afet.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
+  qr_afet.Execute;
+  cxGridDBTableView2.ApplyBestFit;
+end;
+
+procedure TForm1.v_gss_sorgula;
+begin
+  // GSS Sorgusu
+  qr_gss.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
+  qr_gss.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
+  qr_gss.Execute;
+  cxGrid1DBTableView1.ApplyBestFit;
+end;
+
+procedure TForm1.v_rehber_sorgula;
+begin
+  qr_rehber.Open;
+  cxGrid3DBTableView1.ApplyBestFit;
+end;
+
+procedure TForm1.m_login;
+begin
+  try
+    dm.OraSession1.Server := edt_server.Text;
+    dm.OraSession1.Username := edt_username.Text;
+    dm.OraSession1.Password := edt_pass.Text;
+    dm.OraSession1.Open;
+    Panel1.Enabled := true;
+    cxPageControl1.Enabled := true;
+    cxGroupBox1.Visible := false;
+    dxNavBar1.Enabled := true;
+  except
+    on E: Exception do
+      ShowMessage('Hatalý Giriþ Problemi, Olasý Neden ' + ''#13'' + E.Message);
+  end;
+
+end;
+
+procedure TForm1.DoalAfet1Click(Sender: TObject);
+begin
+  try
+
+    SaveDialog1.InitialDir := ExtractFilePath(SaveDialog1.FileName);
+    SaveDialog1.Filter := 'Excel files (*.xls)|*.xlsx';
+    SaveDialog1.FileName := 'Doðal Afet Listesi (' + cxDateEdit1.Text + ' vs' +
+      cxDateEdit2.Text + ')';
+    SaveDialog1.Execute();
+
+    ExportGridToXLSX(SaveDialog1.FileName, cxGrid4, true, true, true, 'xlsx')
+  except
+    on E: Exception do
+      ShowMessage('Excele Aktarým Baþarýsýz,olasý hata' + sLineBreak +
+        E.Message);
+  end;
+end;
+
 procedure TForm1.DosyaKopyala1Click(Sender: TObject);
 begin
   Clipboard.AsText := cxGrid1DBTableView1DOSYA_NO.EditValue;
+end;
+
+procedure TForm1.dxNavBar1Item1Click(Sender: TObject);
+begin
+  cxPageControl1.ActivePageIndex := 2;
+  v_rehber_sorgula;
+end;
+
+procedure TForm1.dxNavBar1Item2Click(Sender: TObject);
+begin
+  cxPageControl1.ActivePageIndex := 3;
+  v_afet_sorgula;
+end;
+
+procedure TForm1.dxNavBar1Item3Click(Sender: TObject);
+begin
+  cxPageControl1.ActivePageIndex := 1;
+  v_fatura_sorgula;
+end;
+
+procedure TForm1.dxNavBar1Item4Click(Sender: TObject);
+begin
+  cxPageControl1.ActivePageIndex := 0;
+  v_gss_sorgula;
+end;
+
+procedure TForm1.edt_passKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+    m_login;
+end;
+
+procedure TForm1.FaturaListesi1Click(Sender: TObject);
+begin
+  try
+
+    SaveDialog1.InitialDir := ExtractFilePath(SaveDialog1.FileName);
+    SaveDialog1.Filter := 'Excel files (*.xls)|*.xlsx';
+    SaveDialog1.FileName := 'Fatura Kesilmiyen Listesi (' + cxDateEdit1.Text +
+      ' vs' + cxDateEdit2.Text + ')';
+    SaveDialog1.Execute();
+
+    ExportGridToXLSX(SaveDialog1.FileName, cxGrid2, true, true, true, 'xlsx')
+  except
+    on E: Exception do
+      ShowMessage('Excele Aktarým Baþarýsýz,olasý hata' + sLineBreak +
+        E.Message);
+  end;
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -273,46 +433,49 @@ begin
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
-
+var
+  rex: Tregistry;
 begin
+  rex := Tregistry.Create;
+  rex.RootKey := HKEY_CURRENT_USER;
+  rex.OpenKeyReadOnly('SOFTWARE\diginet\MedData\');
+  // ShowMessage(rex.ReadString('server'));
+  edt_server.Text := rex.ReadString('server');
+  edt_username.Text := rex.ReadString('username');
 
-  edt_server.Text := 'orcl';
-  edt_username.Text := 'meddatapacs';
-  edt_pass.Text := 'meddatapacs';
-  //
-//  edt_server.Text := 'xe';
-//  edt_username.Text := 'hastane';
-//  edt_pass.Text := 'hastane';
+end;
 
+procedure TForm1.GSSListesi1Click(Sender: TObject);
+begin
   try
-    OraSession1.Server := edt_server.Text;
-    OraSession1.Username := edt_username.Text;
-    OraSession1.Password := edt_pass.Text;
-    OraSession1.Open;
-    qr_gss.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
-    qr_gss.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
-    qr_gss.Execute;
-    cxGrid1DBTableView1.ApplyBestFit();
 
-    qr_fatura.ParamByName('tar1').Value := cxDateEdit1.Text + ' 00:00:00';
-    qr_fatura.ParamByName('tar2').Value := cxDateEdit2.Text + ' 23:59:59';
-    qr_fatura.Execute;
-    cxGridDBTableView1.ApplyBestFit();
+    SaveDialog1.InitialDir := ExtractFilePath(SaveDialog1.FileName);
+    SaveDialog1.Filter := 'Excel files (*.xls)|*.xlsx';
+    SaveDialog1.FileName := 'GSS Alýnmayan Listesi (' + cxDateEdit1.Text + ' vs'
+      + cxDateEdit2.Text + ')';
+    SaveDialog1.Execute();
 
-    qr_rehber.Open;
-    cxGrid3DBTableView1.ApplyBestFit();
+    ExportGridToXLSX(SaveDialog1.FileName, cxGrid1, true, true, true, 'xlsx')
   except
     on E: Exception do
-      ShowMessage('Hatalý Giriþ Problemi, Olasý Neden ' + ''#13'' + E.Message);
+      ShowMessage('Excele Aktarým Baþarýsýz,olasý hata' + sLineBreak +
+        E.Message);
   end;
-  // Panel1.Enabled := false;
-  // cxPageControl1.Enabled := false;
+end;
 
+procedure TForm1.KopyalaDosya1Click(Sender: TObject);
+begin
+  Clipboard.AsText := cxGridDBTableView1DOSYA_NO.EditValue;
 end;
 
 procedure TForm1.KopyalaProtokol1Click(Sender: TObject);
 begin
   Clipboard.AsText := cxGrid1DBTableView1PROTOKOL_NO.EditValue;
+end;
+
+procedure TForm1.KopyalaProtokol2Click(Sender: TObject);
+begin
+  Clipboard.AsText := cxGridDBTableView1PROTOKOL_NO.EditValue;
 end;
 
 procedure TForm1.MenuItem1Click(Sender: TObject);
