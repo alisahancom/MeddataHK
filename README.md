@@ -12,15 +12,15 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<!-- <div align="center">
+<div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="logo.png" alt="Logo" width="1328" height="700">
+    <img src="logo.png" alt="Logo" width="426" height="213">
   </a>
--->
+
   <h3 align="center">Meddata Yardımcı Uygulamalar</h3>
 
   <p align="center">
-   ---
+  Meddata Hasta Kabul Ekranı için hazırlanmış basit,kolay sql ve sorgular
    </p>
 </div>
 
