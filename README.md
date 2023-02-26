@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="logo.png">
     <img src="logo.png" alt="Logo" width="426" height="213">
   </a>
 
