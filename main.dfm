@@ -26,8 +26,6 @@ object Form1: TForm1
     TabOrder = 0
     Properties.ActivePage = tab_afet
     Properties.CustomButtons.Buttons = <>
-    ExplicitLeft = 0
-    ExplicitWidth = 953
     ClientRectBottom = 427
     ClientRectLeft = 5
     ClientRectRight = 755
@@ -35,7 +33,6 @@ object Form1: TForm1
     object tab_gss: TcxTabSheet
       Caption = 'GSS Al'#305'nmayan'
       ImageIndex = 0
-      ExplicitWidth = 943
       object cxGrid1: TcxGrid
         Left = 0
         Top = 0
@@ -181,7 +178,6 @@ object Form1: TForm1
     object tab_fatura: TcxTabSheet
       Caption = 'Fatura Kesmediklerim'
       ImageIndex = 1
-      ExplicitWidth = 943
       object cxGrid2: TcxGrid
         Left = 0
         Top = 0
@@ -337,7 +333,10 @@ object Form1: TForm1
     object tab_rehber: TcxTabSheet
       Caption = 'Rehber'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 943
+      ExplicitHeight = 0
       object cxGrid3: TcxGrid
         Left = 0
         Top = 0
@@ -404,7 +403,6 @@ object Form1: TForm1
     object tab_afet: TcxTabSheet
       Caption = 'Do'#287'al Afet'
       ImageIndex = 3
-      ExplicitWidth = 943
       object cxGrid4: TcxGrid
         Left = 0
         Top = 0
@@ -412,7 +410,6 @@ object Form1: TForm1
         Height = 398
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 943
         object cxGridDBTableView2: TcxGridDBTableView
           PopupMenu = PopupMenu1
           Navigator.Buttons.CustomButtons = <>
@@ -467,6 +464,10 @@ object Form1: TForm1
     object tab_duyuru: TcxTabSheet
       Caption = 'Duyurular'
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object WebBrowser1: TWebBrowser
         Left = 0
         Top = 0
@@ -743,9 +744,6 @@ object Form1: TForm1
       TabOrder = 2
       Transparent = True
       OnClick = cxImage1Click
-      ExplicitLeft = 215
-      ExplicitTop = 6
-      ExplicitHeight = 18
       Height = 24
       Width = 26
     end
